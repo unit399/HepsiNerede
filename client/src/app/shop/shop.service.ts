@@ -1,3 +1,4 @@
+import { environment } from 'src/environments/environment';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { IBrand } from '../shared/models/brand';
@@ -10,8 +11,8 @@ import { IProduct } from '../shared/models/product';
 @Injectable({
   providedIn: 'root'
 })
-export class ShopService {
-  baseUrl = 'https://localhost:5001/api/'
+export class ShopService {  
+  baseUrl = environment.apiUrl;
 
   constructor(private http: HttpClient) { }
 
